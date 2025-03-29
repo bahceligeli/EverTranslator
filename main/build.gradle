@@ -1,13 +1,14 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-kapt'
+    id 'com.google.devtools.ksp'
     id 'androidx.navigation.safeargs.kotlin'
     id 'com.google.gms.google-services'
     id 'com.google.firebase.crashlytics'
     id 'com.google.firebase.firebase-perf'
     id 'com.google.dagger.hilt.android'
     id "io.gitlab.arturbosch.detekt"
+    id("org.jetbrains.kotlin.plugin.compose") version "2.1.20"
 }
 
 def buildParams = getGradle().getStartParameter().toString().toLowerCase()
@@ -23,7 +24,6 @@ task ensureFiles {
 
 android {
     compileSdk 34
-    buildToolsVersion = "34.0.0"
 
     defaultConfig {
         applicationId "tw.firemaples.onscreenocr"
@@ -97,17 +97,13 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.4"
+        kotlinCompilerExtensionVersion = "1.5.15"
     }
     packagingOptions {
         jniLibs {
             pickFirsts += ['lib/*/*.so']
         }
     }
-}
-
-kapt {
-    correctErrorTypes true
 }
 
 dependencies {
@@ -165,8 +161,8 @@ dependencies {
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
 
     // Hilt
-    implementation "com.google.dagger:hilt-android:2.48"
-    kapt "com.google.dagger:hilt-compiler:2.48"
+    implementation "com.google.dagger:hilt-android:2.53"
+    ksp "com.google.dagger:hilt-compiler:2.53"
 
     // Firebase
     implementation platform('com.google.firebase:firebase-bom:32.6.0')
