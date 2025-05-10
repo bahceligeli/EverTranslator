@@ -174,7 +174,7 @@ dependencies {
 
     // Google MLKit - Text recognition v2
     // To recognize Latin script
-    implementation 'com.google.mlkit:text-recognition:16.0.0'
+    implementation 'com.google.mlkit:text-recognition:16.0.1'
     // To recognize Chinese script
     implementation 'com.google.mlkit:text-recognition-chinese:16.0.0'
     // To recognize Devanagari script
