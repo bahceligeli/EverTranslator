@@ -247,5 +247,5 @@ dependencies {
     implementation 'com.facebook.infer.annotation:infer-annotation:0.18.0'
 
     // TouchImageView
-    implementation 'com.github.MikeOrtiz:TouchImageView:3.6'
+    implementation 'com.github.MikeOrtiz:TouchImageView:3.7.1'
 }
