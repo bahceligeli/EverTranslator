@@ -185,7 +185,7 @@ dependencies {
     implementation 'com.google.mlkit:text-recognition-korean:16.0.0'
 
     // Google MLKit - Text translate
-    implementation 'com.google.mlkit:translate:17.0.2'
+    implementation 'com.google.mlkit:translate:17.0.3'
 
     // Google MLKit - Identify Languages
     implementation 'com.google.mlkit:language-id:17.0.6'
