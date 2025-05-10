@@ -27,6 +27,7 @@ import tw.firemaples.onscreenocr.floatings.manager.NavState
 import tw.firemaples.onscreenocr.floatings.manager.NavigationAction
 import tw.firemaples.onscreenocr.floatings.manager.ResultInfo
 import tw.firemaples.onscreenocr.floatings.manager.StateNavigator
+import tw.firemaples.onscreenocr.pages.setting.SettingManager
 import tw.firemaples.onscreenocr.recognition.RecognitionResult
 import tw.firemaples.onscreenocr.translator.TranslationProviderType
 import tw.firemaples.onscreenocr.utils.Constants
@@ -165,7 +166,7 @@ class ResultViewModelImpl @Inject constructor(
                     )
                 }
 
-            is NavState.TextTranslating ->
+            is NavState.TextTranslating -> {
                 state.update {
                     this@ResultViewModelImpl.lastRecognitionResult = navState.recognitionResult
 
@@ -190,6 +191,18 @@ class ResultViewModelImpl @Inject constructor(
                         )
                     )
                 }
+
+                if (SettingManager.autoCopyOCRResult) {
+                    val recognizedText = navState.recognitionResult.result
+                    scope.launch {
+                        Utils.copyToClipboard(
+                            label = LABEL_RECOGNIZED_TEXT,
+                            text = recognizedText,
+                        )
+                    }
+                }
+            }
+
 
             is NavState.TextTranslated -> {
                 when (val resultInfo = navState.resultInfo) {
