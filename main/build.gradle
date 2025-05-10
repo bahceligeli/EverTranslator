@@ -180,7 +180,7 @@ dependencies {
     // To recognize Devanagari script
     implementation 'com.google.mlkit:text-recognition-devanagari:16.0.1'
     // To recognize Japanese script
-    implementation 'com.google.mlkit:text-recognition-japanese:16.0.0'
+    implementation 'com.google.mlkit:text-recognition-japanese:16.0.1'
     // To recognize Korean script
     implementation 'com.google.mlkit:text-recognition-korean:16.0.0'
 
