@@ -116,9 +116,9 @@ dependencies {
     implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2'
-    implementation 'androidx.lifecycle:lifecycle-runtime-compose:2.6.2'
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-compose:$lifecycle_version"
     implementation "androidx.preference:preference-ktx:1.2.1"
     implementation 'androidx.webkit:webkit:1.13.0'
     //noinspection GradleDynamicVersion
@@ -126,10 +126,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.2.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
 
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
     // For using coroutines in tests
     // For runBlockingTest, CoroutineDispatcher etc.
-    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3'
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
     // For InstantTaskExecutorRule
     testImplementation "androidx.arch.core:core-testing:2.2.0"
 
@@ -161,8 +161,8 @@ dependencies {
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
 
     // Hilt
-    implementation "com.google.dagger:hilt-android:2.56.2"
-    ksp "com.google.dagger:hilt-compiler:2.56.2"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    ksp "com.google.dagger:hilt-compiler:$hilt_version"
 
     // Firebase
     implementation platform('com.google.firebase:firebase-bom:32.6.0')
@@ -174,15 +174,15 @@ dependencies {
 
     // Google MLKit - Text recognition v2
     // To recognize Latin script
-    implementation 'com.google.mlkit:text-recognition:16.0.1'
+    implementation "com.google.mlkit:text-recognition:$text_recognition_version"
     // To recognize Chinese script
-    implementation 'com.google.mlkit:text-recognition-chinese:16.0.1'
+    implementation "com.google.mlkit:text-recognition-chinese:$text_recognition_version"
     // To recognize Devanagari script
-    implementation 'com.google.mlkit:text-recognition-devanagari:16.0.1'
+    implementation "com.google.mlkit:text-recognition-devanagari:$text_recognition_version"
     // To recognize Japanese script
-    implementation 'com.google.mlkit:text-recognition-japanese:16.0.1'
+    implementation "com.google.mlkit:text-recognition-japanese:$text_recognition_version"
     // To recognize Korean script
-    implementation 'com.google.mlkit:text-recognition-korean:16.0.1'
+    implementation "com.google.mlkit:text-recognition-korean:$text_recognition_version"
 
     // Google MLKit - Text translate
     implementation 'com.google.mlkit:translate:17.0.3'
@@ -192,24 +192,24 @@ dependencies {
 
     // Kotpref
     // core
-    implementation 'com.chibatching.kotpref:kotpref:2.13.2'
+    implementation "com.chibatching.kotpref:kotpref:$kotpref_version"
     // optional, auto initialization module
-    implementation 'com.chibatching.kotpref:initializer:2.13.2'
+    implementation "com.chibatching.kotpref:initializer:$kotpref_version"
     // optional, support saving enum value and ordinal
-    implementation 'com.chibatching.kotpref:enum-support:2.13.2'
+    implementation "com.chibatching.kotpref:enum-support:$kotpref_version"
     // optional, support saving json string through Gson
-    implementation 'com.chibatching.kotpref:gson-support:2.13.2'
+    implementation "com.chibatching.kotpref:gson-support:$kotpref_version"
     implementation 'com.google.code.gson:gson:2.13.1'
     // optional, support LiveData observable preference
-    implementation 'com.chibatching.kotpref:livedata-support:2.13.2'
+    implementation "com.chibatching.kotpref:livedata-support:$kotpref_version"
 //    implementation 'androidx.lifecycle:lifecycle-livedata:2.2.0'
 //    // experimental, preference screen build dsl
 //    implementation 'com.chibatching.kotpref:preference-screen-dsl:2.13.1'
 
     // Retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit2_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.12.0"
 
     // Tesseract
     implementation 'cz.adaptech.tesseract4android:tesseract4android:4.5.0'
